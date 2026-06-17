@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Sampa Repasse | Aplicativo Oficial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Studio Pilates | Equilíbrio e Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* Reset e Configurações Básicas */
@@ -16,31 +16,145 @@
         }
 
         body {
-            /* Fundo Escuro Premium com Imagem de Carro de Luxo */
-            background: linear-gradient(rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.95)), 
-                        url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+            /* Fundo Premium com Imagem de Estúdio de Pilates Iluminado e Clean */
+            background: linear-gradient(rgba(245, 245, 240, 0.85), rgba(230, 230, 225, 0.92)), 
+                        url('https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            color: #ffffff;
+            color: #2C3E35; /* Tom verde escuro/oliva sofisticado para os textos */
         }
 
-        /* Container Principal (Efeito Glassmorphism Premium) */
+        /* Container Principal (Efeito Glassmorphism Sofisticado e Claro) */
         .container {
             width: 100%;
             max-width: 520px;
-            background: rgba(25, 25, 30, 0.65);
+            background: rgba(255, 255, 255, 0.75);
             padding: 40px 30px;
             border-radius: 24px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(44, 62, 53, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
-        /* Linha superior de LED dinâmico */
+        /* Linha superior de acabamento elegante */
         .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #8A9A86, #C2CDBE);
+        }
+
+        /* Estilização do Conteúdo */
+        .logo-area {
+            margin-bottom: 25px;
+        }
+
+        .logo-area h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #1A2922;
+        }
+
+        .logo-area p {
+            font-size: 14px;
+            color: #607266;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        /* Espaço para a foto de destaque interna (Opcional/Estética) */
+        .featured-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 16px;
+            background: url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+            margin-bottom: 25px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .benefits-list {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #3D4F44;
+        }
+
+        /* Checkmark customizado para o tema */
+        .benefit-item::before {
+            content: '✓';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #E4EBE1;
+            color: #556B2F;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Botão de Ação Premium */
+        .btn-cta {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: #556B2F; /* Verde oliva profundo */
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(85, 107, 47, 0.2);
+        }
+
+        .btn-cta:hover {
+            background: #425424;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(85, 107, 47, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-area">
+            <h1>Studio Sampa Pilates</h1>
+            <p>Conecte seu corpo, mente e movimento</p>
+        </div>
+
+        <div class="featured-image"></div>
+
+        <div class="benefits-list">
+            <div class="benefit-item">Aulas personalizadas (Studio completo)</div>
+            <div class="benefit-item">Foco em postura, flexibilidade e core</div>
+            <div class="benefit-item">Instrutores fisioterapeutas qualificados</div>
+            <div class="benefit-item">Ambiente climatizado e intimista</div>
+        </div>
+
+        <a href="#" class="btn-cta">Agendar Aula Experimental</a>
+    </div>
+
+</body>
+</html>
