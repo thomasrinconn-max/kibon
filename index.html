@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Pilates | Equilíbrio e Performance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vanessa Andrade Pilates | Sorteio Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         /* Reset e Configurações Básicas */
@@ -24,14 +24,14 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            color: #2C3E35; /* Tom verde escuro/oliva sofisticado para os textos */
+            color: #2C3E35;
         }
 
-        /* Container Principal (Efeito Glassmorphism Sofisticado e Claro) */
+        /* Container Principal (Efeito Glassmorphism Clássico e Elegante) */
         .container {
             width: 100%;
             max-width: 520px;
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.8);
             padding: 40px 30px;
             border-radius: 24px;
             box-shadow: 0 20px 50px rgba(44, 62, 53, 0.15);
@@ -43,7 +43,7 @@
             text-align: center;
         }
 
-        /* Linha superior de acabamento elegante */
+        /* Detalhe Superior Delicado */
         .container::before {
             content: '';
             position: absolute;
@@ -51,82 +51,87 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #8A9A86, #C2CDBE);
+            background: linear-gradient(90deg, #A3B19B, #D0D9CD);
         }
 
-        /* Estilização do Conteúdo */
+        /* Estilização do Topo */
         .logo-area {
             margin-bottom: 25px;
         }
 
         .logo-area h1 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: #1A2922;
+            text-transform: uppercase;
         }
 
-        .logo-area p {
-            font-size: 14px;
-            color: #607266;
-            margin-top: 5px;
-            font-weight: 400;
+        /* Selo de Sorteio */
+        .badge-sorteio {
+            display: inline-block;
+            background: #E4EBE1;
+            color: #4A5D3B;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            text-transform: uppercase;
         }
 
-        /* Espaço para a foto de destaque interna (Opcional/Estética) */
+        /* Imagem de Destaque */
         .featured-image {
             width: 100%;
             height: 180px;
             border-radius: 16px;
             background: url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
             margin-bottom: 25px;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
         }
 
-        .benefits-list {
-            text-align: left;
+        /* Bloco de Mensagem Principal */
+        .mensagem-area {
             margin-bottom: 30px;
         }
 
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
+        .mensagem-area h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2E4236;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .mensagem-area p {
             font-size: 15px;
-            color: #3D4F44;
-        }
-
-        /* Checkmark customizado para o tema */
-        .benefit-item::before {
-            content: '✓';
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background: #E4EBE1;
             color: #556B2F;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            margin-right: 12px;
-            font-size: 12px;
-            font-weight: bold;
+            line-height: 1.6;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #556B2F;
+            text-align: left;
         }
 
-        /* Botão de Ação Premium */
+        /* Botão de Download */
         .btn-cta {
             display: block;
             width: 100%;
-            padding: 16px;
-            background: #556B2F; /* Verde oliva profundo */
+            padding: 18px;
+            background: #556B2F; /* Verde Oliva Assinatura */
             color: #ffffff;
             border: none;
-            border-radius: 12px;
+            border-radius: 14px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             box-shadow: 0 10px 20px rgba(85, 107, 47, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-cta:hover {
@@ -140,20 +145,22 @@
 
     <div class="container">
         <div class="logo-area">
-            <h1>Studio Sampa Pilates</h1>
-            <p>Conecte seu corpo, mente e movimento</p>
+            <h1>Vanessa Andrade Pilates</h1>
+            <span class="badge-sorteio">Resultado do Sorteio</span>
         </div>
 
         <div class="featured-image"></div>
 
-        <div class="benefits-list">
-            <div class="benefit-item">Aulas personalizadas (Studio completo)</div>
-            <div class="benefit-item">Foco em postura, flexibilidade e core</div>
-            <div class="benefit-item">Instrutores fisioterapeutas qualificados</div>
-            <div class="benefit-item">Ambiente climatizado e intimista</div>
+        <div class="mensagem-area">
+            <h2>PARABÉNS, ALUNA!<br>VOCÊ FOI SORTEADA! 🎉</h2>
+            <p>
+                Faça agora o <strong>download do aplicativo</strong> para liberar o acesso a todas as aulas. 
+                <br><br>
+                Em seguida, meu assessor irá te ligar para agendar uma <strong>avaliação exclusiva sua comigo mesma</strong>, Professora Vanessa Andrade!
+            </p>
         </div>
 
-        <a href="#" class="btn-cta">Agendar Aula Experimental</a>
+        <a href="#" class="btn-cta">Baixar Aplicativo Agora</a>
     </div>
 
 </body>
